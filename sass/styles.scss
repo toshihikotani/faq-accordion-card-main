@@ -1,0 +1,33 @@
+@import url('typography.css');
+
+// COLORS
+
+// PRIMARY (TEXT)
+$veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+$softRed: hsl(14, 88%, 65%);
+
+// PRIMARY (Gradient)
+$softViolet: hsl(273, 75%, 66%);
+$softBlue: hsl(240, 73%, 65%);
+
+// NEUTRAL (TEXT)
+$veryDarkGrayishBlue: hsl(237, 12%, 33%);
+$darkGrayishBlue: hsl(240, 6%, 50%);
+
+// NEUTRAL (DIVIDERS)
+$lightGrayishBlue: hsl(240, 5%, 91%);
+
+// COMMON
+html, body {
+    max-width: 100vw;
+}
+
+body {
+    background: linear-gradient($softViolet, $softBlue);
+    box-sizing: content-box;
+    height: 100vh;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
