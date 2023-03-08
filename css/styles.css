@@ -13,4 +13,82 @@ body {
   align-items: center;
 }
 
+main {
+  width: 285px;
+  height: 535px;
+  padding: 0px 22px;
+  background: url("../images/bg-pattern-mobile.svg") center top no-repeat;
+  background-color: white;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: 110px auto;
+  grid-template-areas: "image-content" "faq-section";
+}
+main .image-content {
+  grid-area: image-content;
+  position: relative;
+}
+main .image-content .illustration-mobile-content {
+  position: absolute;
+  top: -95%;
+}
+main .faq-section {
+  grid-area: faq-section;
+}
+main .faq-section .faq-header {
+  font-family: "KumbhSans-Bold";
+  font-size: 2.75em;
+  text-align: center;
+  color: hsl(238deg, 29%, 16%);
+  margin-bottom: 32px;
+}
+main .faq-section .faq-question-box {
+  width: 290px;
+}
+main .faq-section .faq-question-box .question-button, main .faq-section .faq-question-box .question-button-selected {
+  width: 100%;
+  background-color: transparent;
+  border: 0px solid;
+  font-family: "KumbhSans-Regular";
+  font-size: 1.1em;
+  text-align: start;
+  color: hsl(237deg, 12%, 33%);
+}
+main .faq-section .faq-question-box .question-button:hover, main .faq-section .faq-question-box .question-button-selected:hover {
+  color: hsl(14deg, 88%, 65%);
+}
+main .faq-section .faq-question-box .question-button::after, main .faq-section .faq-question-box .question-button-selected::after {
+  content: url("../images/icon-arrow-down.svg");
+  float: right;
+}
+main .faq-section .faq-question-box .question-button-selected {
+  font-family: "KumbhSans-Bold" !important;
+  color: hsl(238deg, 29%, 16%) !important;
+}
+main .faq-section .faq-question-box .faq-answer-show {
+  display: block;
+}
+main .faq-section .faq-question-box .faq-answer-show .answer-paragraph {
+  width: 90%;
+  font-family: "KumbhSans-Regular";
+  color: hsl(240deg, 6%, 50%);
+  line-height: 20px;
+  padding: 0px 6px;
+}
+main .faq-section .faq-question-box .faq-answer-hide {
+  display: none;
+}
+main .faq-section .divider {
+  width: 95%;
+  height: 1px;
+  border: none;
+  background-color: hsl(240deg, 5%, 91%);
+  margin: 17px auto;
+}
+
+/* PORTRAIT TABLETS */
+/* LANDSCAPE TABLETS */
+/* LAPTOP/DESKTOP */
+/* LARGE LAPTOP/DESKTOP */
+
 /*# sourceMappingURL=styles.css.map */

@@ -31,3 +31,123 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+// MAIN 
+main {
+    width: 285px;
+    height: 535px;
+    padding: 0px 22px;
+    background: url('../images/bg-pattern-mobile.svg') center top no-repeat;
+    background-color: white;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 110px auto;
+    grid-template-areas: 
+    'image-content'
+    'faq-section';
+
+    // IMAGE CONTENT
+    .image-content{
+        grid-area: image-content;
+        position: relative;
+
+        .illustration-mobile-content {
+            position: absolute;
+            top: -95%;
+        }
+    }
+
+    // FAQ SECTION
+    .faq-section {
+        grid-area: faq-section;
+
+        // FAQ HEADER
+        .faq-header {
+            font-family: 'KumbhSans-Bold';
+            font-size: 2.75em;
+            text-align: center;
+            color: $veryDarkDesaturatedBlue;
+            margin-bottom: 32px;
+        }
+
+        // FAQ QUESTION BOX
+        .faq-question-box {
+            width: 290px;
+            
+            // QUESTION BUTTON
+            .question-button {
+                width: 100%;
+                background-color: transparent;
+                border: 0px solid;
+                font-family: 'KumbhSans-Regular';
+                font-size: 1.10em;
+                text-align: start;
+                color: $veryDarkGrayishBlue;
+
+                // HOVER BUTTON 
+                &:hover {
+                    color: $softRed;
+                }
+
+                // ARROW DOWN
+                &::after{
+                    content: url('../images/icon-arrow-down.svg');
+                    float: right;
+                }
+            }
+
+            // SELECTED QUESTION BUTTON 
+            .question-button-selected {
+                @extend .question-button;
+                font-family: 'KumbhSans-Bold' !important;
+                color: $veryDarkDesaturatedBlue !important;
+            }
+
+            // FAQ ANSWER BOX
+            .faq-answer-show {
+                display: block;
+                        
+                .answer-paragraph {
+                    width: 90%;
+                    font-family: 'KumbhSans-Regular';
+                    color: $darkGrayishBlue;
+                    line-height: 20px;
+                    padding: 0px 6px;
+                }
+            }
+
+            .faq-answer-hide {
+                display: none;
+            }
+        }
+
+        // DIVIDER
+        .divider {
+            width: 95%;
+            height: 1px;
+            border: none;
+            background-color: $lightGrayishBlue;
+            margin: 17px auto;
+        }
+    }
+}
+
+/* PORTRAIT TABLETS */
+@media only screen and (min-width:600px){
+
+}
+
+/* LANDSCAPE TABLETS */
+@media only screen and (min-width:768px){
+    
+}
+
+/* LAPTOP/DESKTOP */
+@media only screen and (min-width:992px){
+    
+}
+
+/* LARGE LAPTOP/DESKTOP */
+@media only screen and (min-width:1200px){
+    
+}
