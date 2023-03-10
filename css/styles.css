@@ -89,6 +89,50 @@ main .faq-section .divider {
 /* PORTRAIT TABLETS */
 /* LANDSCAPE TABLETS */
 /* LAPTOP/DESKTOP */
+@media only screen and (min-width: 992px) {
+  main {
+    width: 920px;
+    height: 510px;
+    padding: 0px;
+    background: none;
+    background-color: white;
+    grid-template-rows: auto;
+    grid-template-columns: 390px 340px;
+    column-gap: 85px;
+    grid-template-areas: "image-content faq-section";
+  }
+  main .image-content {
+    position: relative;
+  }
+  main .image-content .illustration-mobile-content {
+    display: none;
+  }
+  main .faq-section {
+    margin: 45px 0px;
+  }
+  main .faq-section .faq-header {
+    font-size: 2.5em;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  main .faq-section .faq-question-box {
+    width: 100%;
+  }
+  main .faq-section .faq-question-box .question-button, main .faq-section .faq-question-box .question-button-selected {
+    width: 100%;
+    font-size: 1.15em;
+    padding: 2px;
+  }
+  main .faq-section .faq-question-box .faq-answer-show .answer-paragraph {
+    width: 95%;
+    line-height: 18px;
+    padding: 0px 0px;
+  }
+  main .faq-section .divider {
+    width: 100%;
+    margin: 16px auto;
+  }
+}
 /* LARGE LAPTOP/DESKTOP */
 
 /*# sourceMappingURL=styles.css.map */
