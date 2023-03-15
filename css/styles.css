@@ -17,7 +17,6 @@ main {
   width: 285px;
   height: 535px;
   padding: 0px 22px;
-  background: url("../images/bg-pattern-mobile.svg") center top no-repeat;
   background-color: white;
   border-radius: 20px;
   display: grid;
@@ -26,11 +25,29 @@ main {
 }
 main .image-content {
   grid-area: image-content;
-  position: relative;
 }
 main .image-content .illustration-mobile-content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+main .image-content .illustration-mobile-content .overflow-mobile-box {
+  z-index: 0;
+  position: relative;
+  height: inherit;
+  overflow-y: hidden;
+}
+main .image-content .illustration-mobile-content .overflow-mobile-box img {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+}
+main .image-content .illustration-mobile-content .illustration-mobile {
   position: absolute;
   top: -95%;
+}
+main .image-content .illustration-desktop-content {
+  display: none;
 }
 main .faq-section {
   grid-area: faq-section;
@@ -94,7 +111,6 @@ main .faq-section .divider {
     width: 920px;
     height: 510px;
     padding: 0px;
-    background: none;
     background-color: white;
     grid-template-rows: auto;
     grid-template-columns: 390px 340px;
@@ -106,6 +122,34 @@ main .faq-section .divider {
   }
   main .image-content .illustration-mobile-content {
     display: none;
+  }
+  main .image-content .illustration-desktop-content {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  main .image-content .illustration-desktop-content .overflow-desktop-box {
+    z-index: 0;
+    position: relative;
+    height: inherit;
+    overflow: hidden;
+  }
+  main .image-content .illustration-desktop-content .overflow-desktop-box .pattern-desktop {
+    position: absolute;
+    top: -58%;
+    left: -150%;
+  }
+  main .image-content .illustration-desktop-content .overflow-desktop-box .illustration-desktop {
+    position: absolute;
+    top: 14%;
+    left: -22%;
+  }
+  main .image-content .illustration-desktop-content img {
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    left: -25%;
   }
   main .faq-section {
     margin: 45px 0px;

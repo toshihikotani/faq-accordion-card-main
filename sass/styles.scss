@@ -37,7 +37,6 @@ main {
     width: 285px;
     height: 535px;
     padding: 0px 22px;
-    background: url('../images/bg-pattern-mobile.svg') center top no-repeat;
     background-color: white;
     border-radius: 20px;
     display: grid;
@@ -49,11 +48,33 @@ main {
     // IMAGE CONTENT
     .image-content{
         grid-area: image-content;
-        position: relative;
 
         .illustration-mobile-content {
-            position: absolute;
-            top: -95%;
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            .overflow-mobile-box {
+                z-index: 0;
+                position: relative;
+                height: inherit;
+                overflow-y: hidden;
+
+                img {
+                    position: absolute;
+                    top: 0%;
+                    left: 10%;
+                }
+            }
+
+            .illustration-mobile {
+                position: absolute;
+                top: -95%;
+            }
+        }
+
+        .illustration-desktop-content {
+            display: none;
         }
     }
 
@@ -150,7 +171,6 @@ main {
         width: 920px;
         height: 510px;
         padding: 0px;
-        background: none;
         background-color: white;
         grid-template-rows: auto;
         grid-template-columns: 390px 340px;
@@ -164,6 +184,40 @@ main {
 
             .illustration-mobile-content {
                 display: none;
+            }
+
+            .illustration-desktop-content {
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: relative;
+
+                .overflow-desktop-box {
+                    z-index: 0;
+                    position: relative;
+                    height: inherit;
+                    overflow: hidden;
+
+                    .pattern-desktop {
+                        position: absolute;
+                        top: -58%;
+                        left: -150%;
+                    }
+
+                    .illustration-desktop {
+                        position: absolute;
+                        top: 14%;
+                        left: -22%;
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    z-index: 1;
+                    top: 40%;
+                    left: -25%;
+                }
+                
             }
         }
 
@@ -206,9 +260,9 @@ main {
                 margin: 16px auto;
             }
         }
+        
     }
-
-    
+ 
 }
 
 /* LARGE LAPTOP/DESKTOP */
