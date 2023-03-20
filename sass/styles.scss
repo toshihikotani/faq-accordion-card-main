@@ -118,10 +118,14 @@ main {
             }
 
             // SELECTED QUESTION BUTTON 
-            .question-button-selected {
-                @extend .question-button;
+            .selected {
                 font-family: 'KumbhSans-Bold' !important;
                 color: $veryDarkDesaturatedBlue !important;
+
+                // ARROW DOWN
+                &::after{
+                    rotate: 180deg !important;
+                }
             }
 
             // FAQ ANSWER BOX

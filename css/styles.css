@@ -62,7 +62,7 @@ main .faq-section .faq-header {
 main .faq-section .faq-question-box {
   width: 290px;
 }
-main .faq-section .faq-question-box .question-button, main .faq-section .faq-question-box .question-button-selected {
+main .faq-section .faq-question-box .question-button {
   width: 100%;
   background-color: transparent;
   border: 0px solid;
@@ -71,16 +71,19 @@ main .faq-section .faq-question-box .question-button, main .faq-section .faq-que
   text-align: start;
   color: hsl(237deg, 12%, 33%);
 }
-main .faq-section .faq-question-box .question-button:hover, main .faq-section .faq-question-box .question-button-selected:hover {
+main .faq-section .faq-question-box .question-button:hover {
   color: hsl(14deg, 88%, 65%);
 }
-main .faq-section .faq-question-box .question-button::after, main .faq-section .faq-question-box .question-button-selected::after {
+main .faq-section .faq-question-box .question-button::after {
   content: url("../images/icon-arrow-down.svg");
   float: right;
 }
-main .faq-section .faq-question-box .question-button-selected {
+main .faq-section .faq-question-box .selected {
   font-family: "KumbhSans-Bold" !important;
   color: hsl(238deg, 29%, 16%) !important;
+}
+main .faq-section .faq-question-box .selected::after {
+  rotate: 180deg !important;
 }
 main .faq-section .faq-question-box .faq-answer-show {
   display: block;
@@ -162,7 +165,7 @@ main .faq-section .divider {
   main .faq-section .faq-question-box {
     width: 100%;
   }
-  main .faq-section .faq-question-box .question-button, main .faq-section .faq-question-box .question-button-selected {
+  main .faq-section .faq-question-box .question-button {
     width: 100%;
     font-size: 1.15em;
     padding: 2px;
